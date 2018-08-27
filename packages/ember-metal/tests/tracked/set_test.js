@@ -9,10 +9,6 @@ if (EMBER_METAL_TRACKED_PROPERTIES) {
   moduleFor(
     'tracked set',
     class extends AbstractTestCase {
-      teardown() {
-        setHasViews(() => false);
-      }
-
       ['@test should set arbitrary properties on an object'](assert) {
         let obj = createTracked({
           string: 'string',
